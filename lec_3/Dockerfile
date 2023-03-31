@@ -17,5 +17,5 @@ ADD web.tar /var/www/html/
 # COPY 연습
 COPY readme.txt /var/www/html/readme2.txt
 
-# 컨테이너가 만들어지면 실행되면 nginx가 가동
+# 컨테이너가 만들어져서 실행되면 nginx가 가동
 CMD ["nginx", "-g", "daemon off;"]
