@@ -1,0 +1,20 @@
+# 서비스, 컨테이너는 의존성 고려하여 순서대로 기술(밑에는 임의로 이름부여한거다)
+services:
+  #db
+  db:
+  # backend
+  backend:
+  # proxy -> web파트, nginx, 구성설정
+  proxy:
+    # proxy 폴더 밑에가서 Dockerfile을 찾아서 빌드한다.
+    build: proxy
+    
+
+# 볼륨
+volumes:
+# 네트워크
+networks:
+# 보안 -> db 비번파일을 읽어서 적용
+secrets:
+
+  
