@@ -51,6 +51,9 @@ services:
       # db라는 이름을 가진 컨테이너의 상태가 살아 있을때 가동
       db:
         condition: service_healthy
+    # 비번파일을 백엔드에도 카피해둔다, 단 보안적으로 적절하지 않다.
+    secrets:
+      - db-password
   # proxy -> web파트, nginx, 구성설정
   proxy:
     # proxy 폴더 밑에가서 Dockerfile을 찾아서 빌드한다.
